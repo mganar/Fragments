@@ -1,22 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 39, in script
-    [male_character] "What's your name?"
-Exception: Sayer b'[male_character]' is not a function or string.
+  File "game/characters.rpy", line 6, in script
+    define steven = Character([male_character], color = "#eb4034")
+  File "game/characters.rpy", line 6, in <module>
+    define steven = Character([male_character], color = "#eb4034")
+NameError: name 'male_character' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 39, in script
-    [male_character] "What's your name?"
-  File "C:\Users\Marcus Gana\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2579, in execute
-    Say.execute(self)
-  File "C:\Users\Marcus Gana\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 598, in execute
-    raise Exception("Sayer %s is not a function or string." % self.who.encode("utf-8"))
-Exception: Sayer b'[male_character]' is not a function or string.
+  File "game/characters.rpy", line 6, in script
+    define steven = Character([male_character], color = "#eb4034")
+  File "C:\Users\16504\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2241, in execute
+    self.set()
+  File "C:\Users\16504\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2255, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "C:\Users\16504\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/characters.rpy", line 6, in <module>
+    define steven = Character([male_character], color = "#eb4034")
+NameError: name 'male_character' is not defined
 
-Windows-10-10.0.22631 AMD64
+Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.4.24120703
 Fragments 1.0
-Thu Feb 20 16:19:40 2025
+Thu Feb 20 17:24:10 2025

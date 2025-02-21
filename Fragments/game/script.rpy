@@ -35,7 +35,7 @@ label start:
         "Say nothing.":
             jump say_nothing
 
-    male_character  "What's your name?"
+    steven  "What's your name?"
     sylvie "My name is Sylvie"
 
 

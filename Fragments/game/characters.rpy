@@ -1,9 +1,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define sylvie = Character("Eileen")
+define sylvie = Character("Sylvie")
 
-define steven = Character("Steven", color = "#eb4034")
+define steven = Character("[male_character]", color = "#eb4034")
 
 image steven happy = "steven_happy"
 
