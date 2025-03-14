@@ -14,7 +14,7 @@ init python:
             
             self.items.append(item)
             self.no_of_items += 1
-            renpy.say("", f"{item.name} has been added to your inventory.") 
+            renpy.say("", f"{item.name.capitalize()} has been added to your inventory.") 
             renpy.restart_interaction()  # Refresh screen
 
         def remove_item(self, item):
@@ -63,7 +63,7 @@ screen inventory_screen():
                     vbox:  # Center name and image together
                         xalign 0.5  # Center the entire vbox
                         spacing 5
-                        text f"{item.name}" size 22 xalign 0.5  # Center text
+                        text f"{item.name.capitalize()}" size 22 xalign 0.5  # Center text
                         image item.image xsize 100 ysize 100 xalign 0.5  # Center image
 
                         
