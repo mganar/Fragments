@@ -30,7 +30,10 @@ init python:
                 Valley("I'm not carrying anything.")
             else:
                 for item in self.items:
-                    Valley(f"I have this {item.name} which {item.description}.")
+                    if item.name.lower() == "cash":
+                        Valley(f"I have {item.name}, which I can use to buy things.")
+                    else:
+                        Valley(f"I have a {item.name} that {item.description}.")
 
     class InventoryItem():
         def __init__(self, name, description, image):

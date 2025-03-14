@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 39: invalid syntax
-    male_character  "What's your name?"
-                     ^
+File "game/inventory.rpy", line 34: expected an indented block
+                Valley(f"I have {item.name}, which I can use to buy things.")
+                ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Thu Feb 20 16:20:13 2025
+Fri Mar 14 14:26:09 2025

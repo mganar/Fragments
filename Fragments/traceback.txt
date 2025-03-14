@@ -1,28 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/characters.rpy", line 6, in script
-    define steven = Character([male_character], color = "#eb4034")
-  File "game/characters.rpy", line 6, in <module>
-    define steven = Character([male_character], color = "#eb4034")
-NameError: name 'male_character' is not defined
+  File "game/script.rpy", line 50, in script
+    $ invent.list_items()
+  File "game/script.rpy", line 50, in <module>
+    $ invent.list_items()
+NameError: name 'invent' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/characters.rpy", line 6, in script
-    define steven = Character([male_character], color = "#eb4034")
-  File "C:\Users\16504\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2241, in execute
-    self.set()
-  File "C:\Users\16504\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2255, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\16504\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/characters.rpy", line 6, in <module>
-    define steven = Character([male_character], color = "#eb4034")
-NameError: name 'male_character' is not defined
+  File "game/script.rpy", line 50, in script
+    $ invent.list_items()
+  File "C:\Users\Marcus Gana\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Marcus Gana\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 50, in <module>
+    $ invent.list_items()
+NameError: name 'invent' is not defined
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.4.24120703
 Fragments 1.0
-Thu Feb 20 17:24:10 2025
+Fri Mar 14 11:52:18 2025
