@@ -287,7 +287,7 @@ label scene_3_cafeteria_chaos:
 
     show lila thinking
     "Then she turns to me, tilting her head as if considering."
-    val "What? What’s my job?"
+    valley "What? What’s my job?"
 
     show lila smug
     lila "You’re in charge of the taste-testing, of course."
@@ -370,4 +370,81 @@ label scene_3_cafeteria_chaos:
     
     "SPLAT."
 
+label scene_3_1_instant_regret:
+
+    scene cafeteria with fade
+
+    "Time stopped."
+    "Every single person at the nearby tables went stiff."
+    "For a second, I couldn’t process it. The nearby tables near us grew instantly rigid."
+
+    show lila shocked at left
+    show lucky shocked at right
+
+    "Lila’s eyes went wide; Lucky’s mouth hung open."
+    "Actually, Lucky’s whole body hung open."
+    "He was staring at his hand, which was still raised—like he was trying to throw a baseball in gym class."
+    "Only, this was no gym class."
+
+    show lucky thinking
+    "Lucky blinked once, his expression oddly impressed with himself."
+    lucky "Wow. Direct hit…"
+
+    show valley shocked
+    "I felt a prickling along the back of my neck. My stomach turned cold. Did he really just—?"
+    
+    valley "Lucky… what the hell did you just do?"
+
+    show lucky nervous
+    "He didn’t answer immediately. He just kept examining his hand—turning it over and back, as if the betrayal lay in his own fingers."
+    
+    lucky "Honestly, I—I don’t know."
+    lucky "I saw it happening, and then my arm just… did the thing, y’know?"
+
+    valley "What thing?!"
+
+    show lila grin
+    "I flicked my gaze to Lila."
+    "She was vibrating—desperately holding in laughter."
+    "She had that look in her eye, the one that screamed, 'This is about to get interesting.'"
+
+    scene cafeteria with fade
+
+    show garrick normal at center with dissolve
+    "Across the room, Garrick slowly wiped the potatoes off his face."
+    "No emotion. No reaction."
+
+    show garrick angry
+    "But I could see it—the subtle clench of his jaw, the tension in his grip."
+
+    "And then, he took a step forward."
+
+    show garrick angry at right with move
+
+    show lucky terrified at left
+    "Lucky stiffened. His forced smile twitched."
+    lucky "Soooo… that was fun, right?"
+    lucky "You have to admit, great trajectory, solid impact—"
+
+    "He paused, swallowing hard."
+
+    lucky "Please don’t kill me."
+
+    "He then started walking."
+    "Right. Toward. Us."
+
+    show garrick lunge at center with move
+    "Garrick lunged."
+
+    show lucky panic at left
+    hide lucky panic with dissolve
+    play sound "yelping.ogg"
+    "Lucky yelped and ducked under the table."
+    
+    play sound "table_hit.ogg"
+    "Garrick’s hand swiped through empty air, colliding with the tabletop and making everything rattle."
+
+    valley "I couldn’t believe we picked a fight with Garrick of all people."
+
     return
+
