@@ -1,135 +1,208 @@
-﻿
-
-label start:
+﻿label start:
     $ inventory = Inventory([], 0)
-show screen inventory_screen  # Display the inventory permanently
-# Scene 1: Renn's Introduction and Manipulation of Mira
 
-scene cave_background with fade
+    show screen inventory_screen  # Display the inventory permanently
 
-# Introducing Renn
-show renn grinning at left
-renn "The Lord has a plan for us all. Those who trust in His will shall find salvation. Those who question Him... shall suffer."
+label scene_1_opener:
+    scene cafeteria with fade
 
-# Renn addresses the group, speaking with charm
-renn "I know you’re all scared. But there is a way out of this—through faith. Divine judgment has brought us here for a reason, and we must see it through."
 
-# Some prisoners listen attentively, others remain skeptical
-renn "But remember, survival isn’t just about being strong. It’s about knowing when to bend the knee, when to act with wisdom. Only the chosen will rise."
+    show valley_happy at center  # Show a happy expression for Valley
+    
+    valleyNar "There’s a certain rhythm to prison life. The dull hum of fluorescent lights overhead, the clatter of plastic trays on metal tables, the low murmur of conversation that never quite goes away."
+    
+    valleyNar "Sometimes it feels like background music to a life I never asked for."
+    
+    valleyNar "I can’t undo what I did. All I can do is carry it. So I do."
+    
+    show valley_sad at center with dissolve  # Show a sad expression for Valley
+    
+    valleyNar "I’d been sitting there in the cafeteria for who knows how long, hunched over a lunch I wasn’t interested in, letting my thoughts drift."
+    
+    valleyNar "You’d think I’d resent this place—feel anger, or desperation. But mostly, I’m just… numb."
+    
+    valleyNar "It's not that I enjoy being here—I don't. But I deserve this, so I'm serving my time."
+    
+    valleyNar "I don’t fight back. I don’t protest. I just lay low when I can and mind my business."
+    
+    valleyNar "Approaching prison life this way is quite boring, just the same old things. Same roll call, same bland meals, same ship repairs and tasks, same forced exercise—routine after routine."
+    
+    valleyNar "Even drifting in space has lost its wonder. It’s exhausting, but there’s a strange comfort in the monotony. If nothing changes, then nothing gets worse."
+    
+    valleyNar "I just have to hold out long enough."
+    
+    valleyNar "Long enough to protect the people who ended up here with me. My friends. They deserve better than this."
+    
+    scene prison_common_area with fade
 
-# Mira’s struggle, uncertain and fearful
-show mira at center
-mira "I... I don’t know if I can trust anyone here."
+    show valley at center with dissolve
+    
+    valleyNar "Some days, I almost forget where we are. We laugh, complain about the food, pass the time like any other group stuck together for too long."
+    
+    valleyNar "It feels normal. But it isn’t. Not really."
+    
+    valleyNar "Because no matter how easy the routine becomes, I know what’s waiting for me at the end of it—freedom. A fresh start. And I don’t know if I am worthy of that."
+    
+    valleyNar "Because no matter where I go, I’ll always carry this weight."
+    
+    scene fire_memory with fade
 
-# Renn approaches her, his voice soothing
-renn "Mira, sweet child, trust in me. You feel it, don’t you? The weight of the decisions ahead. Fear is natural, but so is faith. You need to choose who to trust."
+    show valley at center with dissolve
+    
+    valleyNar "The thought lingers, settling deep in my chest like a stone, and before I can push it down, the memories come creeping in."
+    
+    valleyNar "The smell hits first. Iron. Thick and suffocating, coating my tongue."
+    
+    valleyNar "Then the sounds—the crackling of fire, the warped groan of metal bending in the heat, the wet, gurgling breath that wasn’t supposed to be there."
+    
+    valleyNar "Fire moves fast. Faster than you think. It spreads like it’s alive, latching onto everything it touches, devouring without hesitation."
+    
+    valleyNar "I can still hear the way the walls groaned under the heat, the flickering glow turning everything into silhouettes."
+    
+    valleyNar "I didn’t mean for it to go that far. I didn’t mean for them to still be inside."
+    
+    valleyNar "I reached for them—God, I reached for them—but I hesitated. I hesitated."
+    
+    valleyNar "The heat burned against my skin, the metal searing into my palms, and I stopped. I froze. I was scared. I was so damn scared."
+    
+    valleyNar "Their voices called for me, hoarse, desperate. They knew I was there."
+    
+    valleyNar "And I just—stood there. Watching."
+    
+    valleyNar "The last thing I saw was their hand, stretching toward me, fingertips blackened, reaching—"
+    
+    valleyNar "And I ran."
+    
+    valleyNar "I just -"
 
-# Renn manipulates her fear
-renn "If you rely on them, on the prisoners... they’ll betray you. But me? I can see the path ahead. We can make it out together, but only if you listen and act swiftly. I know how to survive."
+label scene_2_0_banter:
 
-# Mira, swayed by his words, grows more uncertain but agrees
-mira "But... how do I know you’re telling the truth?"
+    # Lila's entrance
+    play sound "slam.ogg"  # Sound of the tray crashing
+    "SLAM. A tray crashes onto the table, jolting me out of my trance."
+    "I blink hard—sharp breath in, pulse still uneven."
+    
+    hide valley
+    show valley_surprised at left with dissolve
+    show lila_angry at right with dissolve # Show an angry expression for Lila
+    lila "Aaaand once again, I grace you with my divine presence!"
+    
+    # Lila making a dramatic entrance
+    "Her voice rings across the cafeteria, turning a few heads."
+    valleyNar "Subtle? Not in her dictionary."
+   
+    
+    
+    "Behind her, Lucky shuffles over, tray in hand, eyes on the floor like he wants to disappear."
+    hide lila_angry with dissolve
+    show lila_happy at center with dissolve# Show a happy expression for Lila
+    show lucky_sad at right with moveinright  # Show a sad expression for Lucky
+    lucky "Thanks for that grand entrance, Lila. Real subtle."
+    
+    # Lucky's reaction to Lila's entrance
+    "I got a peek at his face, half-amused, half-mortified."
+    lucky "Thanks for that grand entrance, Lila. Real subtle."
+    
+    "He drops onto the table. I blink a few times, trying to catch up. My mind had wandered too far."
+    valley "Feels strange being back in the present."
+    
+    # Lucky notices the protagonist's untouched tray
+    lucky "..."
+    "Lucky glances at my untouched tray. He doesn’t say anything, but I catch the concern in his eyes."
 
-renn "You don’t. That’s the beauty of it, isn't it? Faith is never about certainty. It’s about action, about believing when no one else will. Don’t waste time questioning—take action before it’s too late."
+    # Lila sits down and begins the conversation
+    lila "So..."
+    lila "About that little favor I am owed..."
+    
+    # Lucky and protagonist exchange looks
+    hide lila
+    
+    "Lucky and I exchanged glances."
+    
+    valleyNar "I already know where this is going."
+    
+    lucky "What favor?"
+    "Lucky mouths at me."
+    show lila_happy at center  # Show a happy expression for Lila
+    
+    # Lila's dramatic response
+    lila "Oh, don’t you dare play dumb!"
+    "She grips her tray dramatically, as if preparing to launch it at him."
+    
+    lila "You and Valley lost fair and square last week! I should be crowned Champion of the Throne, as per our agreement."
+    
+    # Lila's game revealed
+    valleyNar "Right. Her game. Some janky, made-up card game she invented—"
+    valleyNar "Rules changed every round, cards got thrown, and a ranking system only she understood."
+    
+    lucky "Lila, you cheated."
+    lila "Creative problem-solving is not cheating."
+    
+    lucky "Swapping out your cards mid-round is literally cheating."
+    
+    # Lila's response and dismissal
+    lila "Listen, if you two actually paid attention, you’d see the hidden genius behind the mechanics."
+    
+    lucky "I am surprised you even know what mechanics even mean."
+    
+    lila "..."
+    valleyNar "Lila waves him off, then her eyes drift slowly to his tray. Her grin widens."
+    
+    lila "Last place was you, Lucky."
+    lila "You know what that means..."
+    
+    lucky "Lila. No."
+    
+    # The brownie situation
+    "Before she can swipe his brownie—I casually push my own tray toward her."
+    
+    valley "Here, take mine. I already owe Lucky a sweet from last week. Let him have his today."
+    
+    "Lila pauses. Raises an eyebrow."
+    valleyNar "Sweets are like gold down here, it’s one of the only highlights of the day."
+    lila "..."
+    
+    valleyNar "Lila shrugged, deciding not to question it."
+    
+    valleyNar "With a hum of victory, she swipes the brownie off my tray instead. She takes a slow, indulgent bite."
+    
+    lila "Mmm."
+    "She leans back."
+    lila "That’s the taste of victory."
+    
+    # Lucky reacts
+    lucky "You idiot, you just stained your suit."
+    
+    "Lila freezes mid-bite. Looks down."
+    valleyNar "Fashion is everything to her. She restitched her entire prisoner suit to look like a piece of designer clothing somehow."
+    
+    valleyNar "Then I saw it, a dark smudge of chocolate on her pristine collar."
+    
+    lucky "Karma."
+    "Lucky grins."
 
-# Renn smiles, satisfied with his manipulation
-renn "I promise, Mira, I’ll make sure you’re safe. Just remember, survival comes first. We’ll make it through this... together."
+    # Lila's reaction to the stain
+    lila "..."
+    valleyNar "Lila’s outraged expression is priceless."
+    
+    # Valley's reaction
+    valleyNar "I let out a quiet chuckle—the tension in my chest loosening just a little."
+    
+    # Lila offers the brownie
+    lila "You want a piece back?"
+    valley "Nah, I’m good. You two fight over it."
+    
+    lucky "Next time, I’m calling the rules. And no swapping cards."
+    
+    # Lila's reply
+    lila "Fine by me. Just know that I already have three different super smart strategic ways to win bubbling in my mind already."
+    
 
-# Scene Transition: Renn's Final Trickery
+    # Valley watches the playful exchange
+    valleyNar "I let their playful exchange wash over me. It’s almost normal. In a place that’s anything but."
+    valleyNar "I swallow down the ache in my chest, force another small smile, and let their chatter carry me away from my guilt just for a second longer."
+    
+    # Final line to indicate things will get serious later
+    valleyNar "But in Cronemire Prison, true peace never lasts."
 
-# Renn encounters the mimic
-hide mira with dissolve
-show mimic 
-renn "Ah, a prisoner in need. You’ve come to the right person."
-
-# Mimic, pretending to be a prisoner, speaks
-mimic "I’m starving... can you help me? Find me food and water. I’ll give you something in return."
-
-# Renn, thinking he's outsmarted the mimic, grins widely
-renn "Of course. I have just what you need."
-
-# The mimic asks for water, and Renn goes to fetch it
-renn "Here, drink first. It's a deal, right?"
-
-# Renn, eager to turn the tables, drinks first, not realizing the danger
-renn "Mmm, tastes just fine. Now... your turn."
-
-# As Renn finishes drinking, he begins to stiffen, realizing too late
-renn "W-Wait... What is this? No... NO!"
-
-# The mimic laughs menacingly as Renn’s body turns to stone
-mimic "You should’ve known... you’ve played the game of deception too long."
-
-# Renn’s final moment as he turns completely to stone
-"show renn, now a statue, with a grim smile frozen on his face"
-renn "So... this... is how it ends."
-hide renn with dissolve
-
-# Scene transition
-
-# Scene 2: Garrick Steals His Revolver
-scene cave_background with fade
-
-# Introduction to Cyrus
-cyrus "Stay in line, prisoners. You are here to work, not to complain."
-
-# The player interacts with Cyrus
-menu:
-    "Remain silent.":
-        cyrus "Good. Silence is a sign of respect for authority."
-    "Challenge him.":
-        cyrus "Do you think you have a say here? No, you do not. You are beneath me."
-
-# Tension with Garrick
-cyrus "Garrick, you're causing too much trouble. I’ll deal with you in due time."
-show garrick angry at left with fade
-cyrus "You think you can just steal from me?"
-
-# Garrick takes the revolver
-cyrus "This revolver is a symbol of authority. You don’t understand its power."
-hide garrick angry
-show garrick with fade
-cyrus "You’re making a big mistake."
-
-# Cyrus loses control
-menu:
-    "Stay calm.": 
-        cyrus "So you think I can’t survive without it? You’re wrong."
-    "Panic.": 
-        cyrus "Get it together! Don’t you see the danger here?"
-
-# Scene 2: Forced to Trust a Prisoner
-# Cyrus reflects on his vulnerability
-cyrus "I’ve always relied on my strength, my authority... but now, I’m vulnerable."
-cyrus "Is this what it means to be weak? To rely on others?"
-
-# Cyrus decides to trust
-cyrus "Fine, if I have to trust you, I will. But this better not be a mistake."
-
-# Scene 3: The Supernatural Becomes Undeniable
-# Mysterious noise disrupts the moment
-play sound "mysterious_noise.mp3"
-cyrus "This... what is that? Is this some trick?"
-
-# Cyrus admits uncertainty
-cyrus "No... this is no trick. There’s something wrong with this cave. Something I don’t understand."
-
-# Scene 4: The Standoff: Choosing Between a Guard & a Prisoner
-# Reflection on leadership
-show cyrus thoughtful at center
-cyrus "Maybe it’s not about control after all."
-menu:
-    "You’re starting to see it now.":
-        cyrus "Perhaps... but I still believe in duty. Duty over everything."
-    "You’ve been holding on too long.":
-        cyrus "Maybe you’re right. But the world I knew doesn’t exist here anymore."
-
-# Scene 5: The Cigarette Scene: Reflection of Change
-cyrus "Survival isn’t about control. It’s about trust. And right now, that’s all we’ve got."
-
-# Scene 6: His Final Sacrifice
-# Final choice
-cyrus "I’ll make my choice. It’s not about power anymore."
-
-# Scene transition
-return
+    return

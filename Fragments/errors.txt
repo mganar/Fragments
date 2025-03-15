@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/inventory.rpy", line 34: expected an indented block
-                Valley(f"I have {item.name}, which I can use to buy things.")
-                ^
+File "game/script.rpy", line 88: Line is indented, but the preceding ATL statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    xcenter 0.5
+    ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Fri Mar 14 14:26:09 2025
+Fri Mar 14 20:44:42 2025

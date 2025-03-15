@@ -1,26 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 50, in script
-    $ invent.list_items()
-  File "game/script.rpy", line 50, in <module>
-    $ invent.list_items()
-NameError: name 'invent' is not defined
+  File "game/script.rpy", line 97, in script
+    show lila at center with moveincenter
+  File "game/script.rpy", line 97, in <module>
+    show lila at center with moveincenter
+NameError: name 'moveincenter' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 50, in script
-    $ invent.list_items()
-  File "C:\Users\Marcus Gana\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Marcus Gana\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 50, in <module>
-    $ invent.list_items()
-NameError: name 'invent' is not defined
+  File "game/script.rpy", line 97, in script
+    show lila at center with moveincenter
+  File "C:\Users\Marcus Gana\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 1363, in execute
+    paired = renpy.python.py_eval(self.paired)
+  File "C:\Users\Marcus Gana\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Marcus Gana\Downloads\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 97, in <module>
+    show lila at center with moveincenter
+NameError: name 'moveincenter' is not defined
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.4.24120703
 Fragments 1.0
-Fri Mar 14 11:52:18 2025
+Fri Mar 14 20:45:47 2025

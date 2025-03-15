@@ -9,10 +9,13 @@ define ethan = Character("Ethan", color = "#34eb9c")
 define lila = Character("Lila", color = "#5016ef")
 define renn = Character("Renn", color = "#5016ef")
 define mimic = Character("Mimic", color = "#34eb9c")
+define lucky = Character("Lucky", color = "#34eb9c")
 
 
+define valley = Character("Valley", color = "#eb4034")
+# Define Valley for narration with gray text
+define valleyNar = Character("Valley", color="#808080")  # Gray color for narration
 
-define valley = Character("[male_character]", color = "#eb4034")
 
 image cyrus neutral:
     "cyrus_neutral"
