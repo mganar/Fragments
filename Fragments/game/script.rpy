@@ -73,7 +73,7 @@ label scene_1_opener:
     
     valleyNar "And I ran."
     
-    valleyNar "I just -"
+    valleyNar "I just —"
 
 label scene_2_0_banter:
 
@@ -101,12 +101,13 @@ label scene_2_0_banter:
     
     # Lucky's reaction to Lila's entrance
     "I got a peek at his face, half-amused, half-mortified."
-    lucky "Thanks for that grand entrance, Lila. Real subtle."
     
     "He drops onto the table. I blink a few times, trying to catch up. My mind had wandered too far."
     valley "Feels strange being back in the present."
     
     # Lucky notices the protagonist's untouched tray
+    hide lucky_sad
+    show lucky at right
     lucky "..."
     "Lucky glances at my untouched tray. He doesn’t say anything, but I catch the concern in his eyes."
 
@@ -115,7 +116,7 @@ label scene_2_0_banter:
     lila "About that little favor I am owed..."
     
     # Lucky and protagonist exchange looks
-    hide lila
+    hide lila_happy
     
     "Lucky and I exchanged glances."
     
@@ -123,7 +124,8 @@ label scene_2_0_banter:
     
     lucky "What favor?"
     "Lucky mouths at me."
-    show lila_happy at center  # Show a happy expression for Lila
+   
+    show lila_happy
     
     # Lila's dramatic response
     lila "Oh, don’t you dare play dumb!"
@@ -204,5 +206,168 @@ label scene_2_0_banter:
     
     # Final line to indicate things will get serious later
     valleyNar "But in Cronemire Prison, true peace never lasts."
+
+    
+
+
+label scene_3_cafeteria_chaos:
+
+
+    valleyNar "They say lunch is supposed to be the most peaceful time of day around here."
+    valleyNar "Personally, I wouldn’t describe it as peaceful—the food they serve is borderline a war crime."
+    valleyNar "But it’s one of the few times I get to sit and talk with the friends I made."
+
+    valleyNar "Normally, the cafeteria is just a cramped, echoing box, filled with the dull clatter of trays and the low murmur of conversation."
+    valleyNar "Everyone knows who not to mess with and who to sit with."
+    valleyNar "I’d found a semi-quiet spot by the so-called 'windows'—which are really just torn holes in the wall."
+
+    valleyNar "My table is the same as always."
+    valleyNar "Just me, Lucky, and Lila."
+    valleyNar "It used to be four of us."
+    valleyNar "We still carry her with us—"
+    valleyNar "We even save her seat despite it always being empty."
+    valleyNar "We don’t talk about her being gone. We just kind of continue as if she is still here."
+    valleyNar "This place already has a bad mood to it, and some things are too heavy to say out loud."
+    valleyNar "Better to keep it that way."
+    hide lila_happy
+    show lila normal 
+    show lucky normal at right with dissolve
+
+    valleyNar "We poke at our trays—mushy potatoes, watery peas, and something that might have once been meat—trying to choke it down while talking about anything other than prison life."
+    valleyNar "Maybe the next game we’d play, or the plans for when we finally got out."
+
+    valleyNar "It was an unspoken rule between us: no judgment."
+    valleyNar "We never asked each other what we did to end up here—not unless the other person wanted to tell."
+    valleyNar "It kept things simple, made sure our friendship wasn’t built on guilt or distrust."
+    valleyNar "We were here for who we were now, not whatever mistakes had landed us in this place."
+    valleyNar "It was Lucky who came up with that pact, and I am quite glad he did."
+
+    valleyNar "Still, I had plans to keep us together once we were free. It’s not like I had anyone waiting for me on the outside."
+
+    show lila grin at center with dissolve
+
+    lila "Alright!"
+    "Lila suddenly tosses her fork down with an air of absolute authority."
+    
+    lucky "Oh no."
+
+    "Lucky glances up, already wary."
+
+    lila "Once we’re out of here, we’re opening a restaurant."
+
+    hide lucky
+    
+    show lucky surprised at right 
+
+    "I pause mid-bite, blinking." 
+    valleyNar "That was not where I thought this was going."
+    lucky "You? Owning a restaurant? What, so you can boss us around all day?"
+
+    show lila smug at center
+
+    "Lila grows a completely serious expression."
+    lila "That’s the point."
+    lucky "That’s a terrible point."
+
+    show lila smug2 
+
+    lila "You say that now, but just imagine it. I run the front—customers love me, obviously."
+    lila "Lucky, you’ll handle the finances, since, you know—you're the nerd."
+
+    show lucky shocked at right
+
+    "Lucky’s mouth drops wide open."
+    lucky "Excuse me—"
+    hide lila shocked
+    show lila excited 
+
+    lila "Gin, our top cook, I can help her cause I am the sweetest of all time and memorized— all. her. recipes."
+    
+    "I smile at that."
+
+    show lila thinking
+    "Then she turns to me, tilting her head as if considering."
+    val "What? What’s my job?"
+
+    show lila smug
+    lila "You’re in charge of the taste-testing, of course."
+
+  
+    hide lila_happy 
+    show lila shocked 
+
+   
+   
+    valley "Yeah, that’s real smart. Put me in charge of eating the product and see how long we last before we go bankrupt."
+
+
+   
+    "Lila gasps dramatically, clutching her chest."
+    lila "Valley, I am offended that you think I wouldn’t factor your gluttony into my business model."
+
+    show lucky angry
+    lucky "No—no, cause let’s go back to that nerd comment—"
+
+    "I almost laugh, shaking my head."
+
+    valleyNar "As he continues, I start to look around the cafeteria like I always do."
+    hide valley_surprised with dissolve
+    hide lila shocked with dissolve
+    hide lucky angry with dissolve
+    valleyNar "I can’t help but notice something is off today."
+    valleyNar "Some sort of tension."
+    valleyNar "If you’re around here long enough, you start to understand and get used to how things are supposed to feel."
+
+    valleyNar "The guards weren’t just their usual bored selves—they were watching. Focused."
+    valleyNar "The prisoners seemed too… off."
+    valleyNar "Small groups whispering in corners, a few guys standing instead of sitting, too quiet in a place that usually never shut up."
+
+    valleyNar "My gut told me something was coming."
+
+    play sound "thud.ogg"
+
+    valleyNar "Before I can look around further, I hear a—"
+
+
+
+    "THUD."
+
+    "A chair scrapes violently against the floor."
+    "A tray crashes."
+    "A sharp inhale echoes across the hall, and then—"
+    play music "tense_music.ogg"
+    "silence"
+
+
+    valleyNar "A voice cuts through the tension like a blade."
+
+    show garrick normal with dissolve
+    garrick "Watch where you’re going, stupid."
+
+
+
+    valleyNar "Even if I hadn’t heard him, I would’ve felt him."
+    valleyNar "Garrick has this way of being noticed without making a scene—because he doesn’t have to."
+    valleyNar "His presence alone is enough."
+
+    valleyNar "The guy he just shoved is frozen in place."
+    valleyNar "His tray had gone flying, splattering mashed potatoes and peas all over the ground."
+    valleyNar "He twitches, debating whether to pick it up or run the hell away."
+
+    show garrick angry
+    garrick "Pick it up."
+
+    valleyNar "Not a request. A threat."
+
+    valleyNar "The prisoner hesitates."
+    valleyNar "The cafeteria holds its breath."
+
+    pause 1.0
+
+    play sound "splat.ogg"
+
+    "And then—"
+    
+    "SPLAT."
 
     return
