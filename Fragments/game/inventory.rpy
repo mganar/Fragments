@@ -67,3 +67,9 @@ screen inventory_screen():
                         image item.image xsize 100 ysize 100 xalign 0.5  # Center image
 
                         
+
+define door_key = InventoryItem("door key", "unlocks doors", "key")
+define chest_key = InventoryItem("chest key", "unlocks chests", "key")
+define cash = InventoryItem("cash", "used to purchase", "dollar")
+define water = InventoryItem("water", "hydrates character", "water")
+define keycard = InventoryItem("keycard", "unlocks the restricted hallway", "keycard.png")

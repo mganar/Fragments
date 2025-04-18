@@ -2,10 +2,21 @@
     $ inventory = Inventory([], 0)
 
     show screen inventory_screen  # Display the inventory permanently
+    show screen open_relationship_menu
+    show screen button
 
 label scene_1_opener:
+
+    valley "Hey, what's this?"
+    "You find a crumpled bill under the tray."
+    $ inventory.add_item(chest_key)
+    
     scene cafeteria with fade
 
+    if keycard in inventory.items:
+        "You swipe the keycard. The door clicks open."
+    else:
+        "The door won’t budge. You need a keycard."
 
     show valley_happy at center  # Show a happy expression for Valley
     
@@ -86,19 +97,22 @@ label scene_2_0_banter:
     show valley_surprised at left with dissolve
     show lila_angry at right with dissolve # Show an angry expression for Lila
     lila "Aaaand once again, I grace you with my divine presence!"
+    $ introduce_character("Lila")
     
+    
+  
     # Lila making a dramatic entrance
     "Her voice rings across the cafeteria, turning a few heads."
     valleyNar "Subtle? Not in her dictionary."
    
-    
-    
     "Behind her, Lucky shuffles over, tray in hand, eyes on the floor like he wants to disappear."
     hide lila_angry with dissolve
-    show lila_happy at center with dissolve# Show a happy expression for Lila
+    show lila_happy at center with dissolve  # Show a happy expression for Lila
     show lucky_sad at right with moveinright  # Show a sad expression for Lucky
     lucky "Thanks for that grand entrance, Lila. Real subtle."
-    
+    $ introduce_character("Lucky")
+ 
+
     # Lucky's reaction to Lila's entrance
     "I got a peek at his face, half-amused, half-mortified."
     
@@ -114,19 +128,38 @@ label scene_2_0_banter:
     # Lila sits down and begins the conversation
     lila "So..."
     lila "About that little favor I am owed..."
-    
+    # Player makes a choice here
+    menu(time=10, timeout="left_hanging"):
+        "Give Lila the brownie":
+            $ change_affection("Lila", 30)
+            $ change_affection("Lucky", -30)
+         
+            valley "Here, take mine. I already owe Lucky a sweet from last week. Let him have his today."
+            valleyNar "Sweets are like gold down here, it’s one of the only highlights of the day."
+            lila "Mmm."
+            lila "That’s the taste of victory."
+        "Defend Lucky’s brownie":
+            $ change_affection("Lila", -30)
+            $ change_affection("Lucky", +30)
+
+            valley "Back off, Lila. Lucky earned that brownie."
+            lila "Wow. Harsh."
+            valleyNar "Her grin falters for just a second."
+            lucky "Thanks, Valley. Appreciate it."
+    label left_hanging:
+        "Your silence means everything"
+        
+
+   
+
     # Lucky and protagonist exchange looks
     hide lila_happy
-    
     "Lucky and I exchanged glances."
-    
     valleyNar "I already know where this is going."
-    
     lucky "What favor?"
     "Lucky mouths at me."
    
     show lila_happy
-    
     # Lila's dramatic response
     lila "Oh, don’t you dare play dumb!"
     "She grips her tray dramatically, as if preparing to launch it at him."
