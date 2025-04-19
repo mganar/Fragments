@@ -53,7 +53,7 @@ screen inventory_screen():
             xalign 1.0  # Align to the right
             yalign 0.2  # Adjust vertical position
             padding (20, 20)
-            background "#33333388"  # Semi-transparent dark background
+            background "affs.png" 
 
             vbox:
                 spacing 10
