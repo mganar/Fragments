@@ -43,28 +43,39 @@ init python:
 
 # Variable to track inventory visibility
 default inventory_visible = False  
+default inventory_menu_unlocked = False
+
+
+screen button1:
+    vbox xalign 0.9 yalign 0.0:  # Fully right and a bit lower from the top
+        if inventory_menu_unlocked:
+            imagebutton:
+                idle "inventory.png"
+                hover "inventory_hover.png"
+                action ToggleVariable("inventory_visible")
 
 # Inventory Screen (Fixed)
 screen inventory_screen():
-    key "i" action ToggleVariable("inventory_visible", True, False)  # Toggle inventory visibility
+    if inventory_menu_unlocked:
+        key "i" action ToggleVariable("inventory_visible", True, False)  # Toggle inventory visibility
 
-    if inventory_visible:
-        frame:
-            xalign 1.0  # Align to the right
-            yalign 0.2  # Adjust vertical position
-            padding (20, 20)
-            background "affs.png" 
+        if inventory_visible:
+            frame:
+                xalign 1.0  # Align to the right
+                yalign 0.2  # Adjust vertical position
+                padding (20, 20)
+                background "affs.png" 
 
-            vbox:
-                spacing 10
-                label "Inventory" xalign 0.5
+                vbox:
+                    spacing 10
+                    label "Inventory" xalign 0.5
 
-                for item in inventory.items:
-                    vbox:  # Center name and image together
-                        xalign 0.5  # Center the entire vbox
-                        spacing 5
-                        text f"{item.name.capitalize()}" size 22 xalign 0.5  # Center text
-                        image item.image xsize 100 ysize 100 xalign 0.5  # Center image
+                    for item in inventory.items:
+                        vbox:  # Center name and image together
+                            xalign 0.5  # Center the entire vbox
+                            spacing 5
+                            text f"{item.name.capitalize()}" size 22 xalign 0.5  # Center text
+                            image item.image xsize 100 ysize 100 xalign 0.5  # Center image
 
                         
 

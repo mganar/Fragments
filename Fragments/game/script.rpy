@@ -2,15 +2,16 @@
     $ inventory = Inventory([], 0)
 
     show screen inventory_screen  # Display the inventory permanently
-    show screen open_relationship_menu
     show screen button
-
+    show screen button1
+    show screen open_relationship_menu
 label scene_1_opener:
 
     valley "Hey, what's this?"
     "You find a crumpled bill under the tray."
     $ inventory.add_item(chest_key)
-    
+    $ inventory_menu_unlocked = True
+    "Press 'I' to see you inventory!"
     scene cafeteria with fade
 
     if keycard in inventory.items:
@@ -20,71 +21,71 @@ label scene_1_opener:
 
     show valley_happy at center  # Show a happy expression for Valley
     
-    valleyNar "There’s a certain rhythm to prison life. The dull hum of fluorescent lights overhead, the clatter of plastic trays on metal tables, the low murmur of conversation that never quite goes away."
+    "There’s a certain rhythm to prison life. The dull hum of fluorescent lights overhead, the clatter of plastic trays on metal tables, the low murmur of conversation that never quite goes away."
     
-    valleyNar "Sometimes it feels like background music to a life I never asked for."
+    "Sometimes it feels like background music to a life I never asked for."
     
-    valleyNar "I can’t undo what I did. All I can do is carry it. So I do."
+    "I can’t undo what I did. All I can do is carry it. So I do."
     
     show valley_sad at center with dissolve  # Show a sad expression for Valley
     
-    valleyNar "I’d been sitting there in the cafeteria for who knows how long, hunched over a lunch I wasn’t interested in, letting my thoughts drift."
+    "I’d been sitting there in the cafeteria for who knows how long, hunched over a lunch I wasn’t interested in, letting my thoughts drift."
     
-    valleyNar "You’d think I’d resent this place—feel anger, or desperation. But mostly, I’m just… numb."
+    "You’d think I’d resent this place—feel anger, or desperation. But mostly, I’m just… numb."
     
-    valleyNar "It's not that I enjoy being here—I don't. But I deserve this, so I'm serving my time."
+    "It's not that I enjoy being here—I don't. But I deserve this, so I'm serving my time."
     
-    valleyNar "I don’t fight back. I don’t protest. I just lay low when I can and mind my business."
+    "I don’t fight back. I don’t protest. I just lay low when I can and mind my business."
     
-    valleyNar "Approaching prison life this way is quite boring, just the same old things. Same roll call, same bland meals, same ship repairs and tasks, same forced exercise—routine after routine."
+    "Approaching prison life this way is quite boring, just the same old things. Same roll call, same bland meals, same ship repairs and tasks, same forced exercise—routine after routine."
     
-    valleyNar "Even drifting in space has lost its wonder. It’s exhausting, but there’s a strange comfort in the monotony. If nothing changes, then nothing gets worse."
+    "Even drifting in space has lost its wonder. It’s exhausting, but there’s a strange comfort in the monotony. If nothing changes, then nothing gets worse."
     
-    valleyNar "I just have to hold out long enough."
+    "I just have to hold out long enough."
     
-    valleyNar "Long enough to protect the people who ended up here with me. My friends. They deserve better than this."
+    "Long enough to protect the people who ended up here with me. My friends. They deserve better than this."
     
     scene prison_common_area with fade
 
     show valley at center with dissolve
     
-    valleyNar "Some days, I almost forget where we are. We laugh, complain about the food, pass the time like any other group stuck together for too long."
+    "Some days, I almost forget where we are. We laugh, complain about the food, pass the time like any other group stuck together for too long."
     
-    valleyNar "It feels normal. But it isn’t. Not really."
+    "It feels normal. But it isn’t. Not really."
     
-    valleyNar "Because no matter how easy the routine becomes, I know what’s waiting for me at the end of it—freedom. A fresh start. And I don’t know if I am worthy of that."
+    "Because no matter how easy the routine becomes, I know what’s waiting for me at the end of it—freedom. A fresh start. And I don’t know if I am worthy of that."
     
-    valleyNar "Because no matter where I go, I’ll always carry this weight."
+    "Because no matter where I go, I’ll always carry this weight."
     
     scene fire_memory with fade
 
     show valley at center with dissolve
     
-    valleyNar "The thought lingers, settling deep in my chest like a stone, and before I can push it down, the memories come creeping in."
+    "The thought lingers, settling deep in my chest like a stone, and before I can push it down, the memories come creeping in."
     
-    valleyNar "The smell hits first. Iron. Thick and suffocating, coating my tongue."
+    "The smell hits first. Iron. Thick and suffocating, coating my tongue."
     
-    valleyNar "Then the sounds—the crackling of fire, the warped groan of metal bending in the heat, the wet, gurgling breath that wasn’t supposed to be there."
+    "Then the sounds—the crackling of fire, the warped groan of metal bending in the heat, the wet, gurgling breath that wasn’t supposed to be there."
     
-    valleyNar "Fire moves fast. Faster than you think. It spreads like it’s alive, latching onto everything it touches, devouring without hesitation."
+    "Fire moves fast. Faster than you think. It spreads like it’s alive, latching onto everything it touches, devouring without hesitation."
     
-    valleyNar "I can still hear the way the walls groaned under the heat, the flickering glow turning everything into silhouettes."
+    "I can still hear the way the walls groaned under the heat, the flickering glow turning everything into silhouettes."
     
-    valleyNar "I didn’t mean for it to go that far. I didn’t mean for them to still be inside."
+    "I didn’t mean for it to go that far. I didn’t mean for them to still be inside."
     
-    valleyNar "I reached for them—God, I reached for them—but I hesitated. I hesitated."
+    "I reached for them—God, I reached for them—but I hesitated. I hesitated."
     
-    valleyNar "The heat burned against my skin, the metal searing into my palms, and I stopped. I froze. I was scared. I was so damn scared."
+    "The heat burned against my skin, the metal searing into my palms, and I stopped. I froze. I was scared. I was so damn scared."
     
-    valleyNar "Their voices called for me, hoarse, desperate. They knew I was there."
+    "Their voices called for me, hoarse, desperate. They knew I was there."
     
-    valleyNar "And I just—stood there. Watching."
+    "And I just—stood there. Watching."
     
-    valleyNar "The last thing I saw was their hand, stretching toward me, fingertips blackened, reaching—"
+    "The last thing I saw was their hand, stretching toward me, fingertips blackened, reaching—"
     
-    valleyNar "And I ran."
+    "And I ran."
     
-    valleyNar "I just —"
+    "I just —"
 
 label scene_2_0_banter:
 
@@ -99,11 +100,32 @@ label scene_2_0_banter:
     lila "Aaaand once again, I grace you with my divine presence!"
     $ introduce_character("Lila")
     
+        # Example choice affecting Lila's relationship
+    menu:
+        "How do you respond to Lila's entrance?"
+        
+        "Laugh and play along":
+            $ change_affection("Lila", 5)
+            lila "See? Someone appreciates my flair."
+            
+        "Roll your eyes":
+            $ change_affection("Lucky", -3)
+            lila "Rude! I bring life to this dead place."
     
+
+    $ relationship_menu_unlocked = True
+    "You can press 'R' to check you reltionship with other characters in the game!"
+
+
+
+    if get_affection("Mira") > 10:
+        lila "You've always had my back, you know?"
+    else:
+            lila "Tch. You're always so cold to me."
   
     # Lila making a dramatic entrance
     "Her voice rings across the cafeteria, turning a few heads."
-    valleyNar "Subtle? Not in her dictionary."
+    "Subtle? Not in her dictionary."
    
     "Behind her, Lucky shuffles over, tray in hand, eyes on the floor like he wants to disappear."
     hide lila_angry with dissolve
@@ -115,6 +137,7 @@ label scene_2_0_banter:
 
     # Lucky's reaction to Lila's entrance
     "I got a peek at his face, half-amused, half-mortified."
+ 
     
     "He drops onto the table. I blink a few times, trying to catch up. My mind had wandered too far."
     valley "Feels strange being back in the present."
@@ -129,13 +152,13 @@ label scene_2_0_banter:
     lila "So..."
     lila "About that little favor I am owed..."
     # Player makes a choice here
-    menu(time=10, timeout="left_hanging"):
+    menu(time=5, timeout="left_hanging"):
         "Give Lila the brownie":
             $ change_affection("Lila", 30)
             $ change_affection("Lucky", -30)
          
             valley "Here, take mine. I already owe Lucky a sweet from last week. Let him have his today."
-            valleyNar "Sweets are like gold down here, it’s one of the only highlights of the day."
+            "Sweets are like gold down here, it’s one of the only highlights of the day."
             lila "Mmm."
             lila "That’s the taste of victory."
         "Defend Lucky’s brownie":
@@ -144,7 +167,7 @@ label scene_2_0_banter:
 
             valley "Back off, Lila. Lucky earned that brownie."
             lila "Wow. Harsh."
-            valleyNar "Her grin falters for just a second."
+            "Her grin falters for just a second."
             lucky "Thanks, Valley. Appreciate it."
     label left_hanging:
         "Your silence means everything"
@@ -155,7 +178,7 @@ label scene_2_0_banter:
     # Lucky and protagonist exchange looks
     hide lila_happy
     "Lucky and I exchanged glances."
-    valleyNar "I already know where this is going."
+    "I already know where this is going."
     lucky "What favor?"
     "Lucky mouths at me."
    
@@ -167,8 +190,8 @@ label scene_2_0_banter:
     lila "You and Valley lost fair and square last week! I should be crowned Champion of the Throne, as per our agreement."
     
     # Lila's game revealed
-    valleyNar "Right. Her game. Some janky, made-up card game she invented—"
-    valleyNar "Rules changed every round, cards got thrown, and a ranking system only she understood."
+    "Right. Her game. Some janky, made-up card game she invented—"
+    "Rules changed every round, cards got thrown, and a ranking system only she understood."
     
     lucky "Lila, you cheated."
     lila "Creative problem-solving is not cheating."
@@ -181,7 +204,7 @@ label scene_2_0_banter:
     lucky "I am surprised you even know what mechanics even mean."
     
     lila "..."
-    valleyNar "Lila waves him off, then her eyes drift slowly to his tray. Her grin widens."
+    "Lila waves him off, then her eyes drift slowly to his tray. Her grin widens."
     
     lila "Last place was you, Lucky."
     lila "You know what that means..."
@@ -194,12 +217,12 @@ label scene_2_0_banter:
     valley "Here, take mine. I already owe Lucky a sweet from last week. Let him have his today."
     
     "Lila pauses. Raises an eyebrow."
-    valleyNar "Sweets are like gold down here, it’s one of the only highlights of the day."
+    "Sweets are like gold down here, it’s one of the only highlights of the day."
     lila "..."
     
-    valleyNar "Lila shrugged, deciding not to question it."
+    "Lila shrugged, deciding not to question it."
     
-    valleyNar "With a hum of victory, she swipes the brownie off my tray instead. She takes a slow, indulgent bite."
+    "With a hum of victory, she swipes the brownie off my tray instead. She takes a slow, indulgent bite."
     
     lila "Mmm."
     "She leans back."
@@ -209,19 +232,19 @@ label scene_2_0_banter:
     lucky "You idiot, you just stained your suit."
     
     "Lila freezes mid-bite. Looks down."
-    valleyNar "Fashion is everything to her. She restitched her entire prisoner suit to look like a piece of designer clothing somehow."
+    "Fashion is everything to her. She restitched her entire prisoner suit to look like a piece of designer clothing somehow."
     
-    valleyNar "Then I saw it, a dark smudge of chocolate on her pristine collar."
+    "Then I saw it, a dark smudge of chocolate on her pristine collar."
     
     lucky "Karma."
     "Lucky grins."
 
     # Lila's reaction to the stain
     lila "..."
-    valleyNar "Lila’s outraged expression is priceless."
+    "Lila’s outraged expression is priceless."
     
     # Valley's reaction
-    valleyNar "I let out a quiet chuckle—the tension in my chest loosening just a little."
+    "I let out a quiet chuckle—the tension in my chest loosening just a little."
     
     # Lila offers the brownie
     lila "You want a piece back?"
@@ -234,11 +257,11 @@ label scene_2_0_banter:
     
 
     # Valley watches the playful exchange
-    valleyNar "I let their playful exchange wash over me. It’s almost normal. In a place that’s anything but."
-    valleyNar "I swallow down the ache in my chest, force another small smile, and let their chatter carry me away from my guilt just for a second longer."
+    "I let their playful exchange wash over me. It’s almost normal. In a place that’s anything but."
+    "I swallow down the ache in my chest, force another small smile, and let their chatter carry me away from my guilt just for a second longer."
     
     # Final line to indicate things will get serious later
-    valleyNar "But in Cronemire Prison, true peace never lasts."
+    "But in Cronemire Prison, true peace never lasts."
 
     
 
@@ -246,36 +269,36 @@ label scene_2_0_banter:
 label scene_3_cafeteria_chaos:
 
 
-    valleyNar "They say lunch is supposed to be the most peaceful time of day around here."
-    valleyNar "Personally, I wouldn’t describe it as peaceful—the food they serve is borderline a war crime."
-    valleyNar "But it’s one of the few times I get to sit and talk with the friends I made."
+    "They say lunch is supposed to be the most peaceful time of day around here."
+    "Personally, I wouldn’t describe it as peaceful—the food they serve is borderline a war crime."
+    "But it’s one of the few times I get to sit and talk with the friends I made."
 
-    valleyNar "Normally, the cafeteria is just a cramped, echoing box, filled with the dull clatter of trays and the low murmur of conversation."
-    valleyNar "Everyone knows who not to mess with and who to sit with."
-    valleyNar "I’d found a semi-quiet spot by the so-called 'windows'—which are really just torn holes in the wall."
+    "Normally, the cafeteria is just a cramped, echoing box, filled with the dull clatter of trays and the low murmur of conversation."
+    "Everyone knows who not to mess with and who to sit with."
+    "I’d found a semi-quiet spot by the so-called 'windows'—which are really just torn holes in the wall."
 
-    valleyNar "My table is the same as always."
-    valleyNar "Just me, Lucky, and Lila."
-    valleyNar "It used to be four of us."
-    valleyNar "We still carry her with us—"
-    valleyNar "We even save her seat despite it always being empty."
-    valleyNar "We don’t talk about her being gone. We just kind of continue as if she is still here."
-    valleyNar "This place already has a bad mood to it, and some things are too heavy to say out loud."
-    valleyNar "Better to keep it that way."
+    "My table is the same as always."
+    "Just me, Lucky, and Lila."
+    "It used to be four of us."
+    "We still carry her with us—"
+    "We even save her seat despite it always being empty."
+    "We don’t talk about her being gone. We just kind of continue as if she is still here."
+    "This place already has a bad mood to it, and some things are too heavy to say out loud."
+    "Better to keep it that way."
     hide lila_happy
     show lila normal 
     show lucky normal at right with dissolve
 
-    valleyNar "We poke at our trays—mushy potatoes, watery peas, and something that might have once been meat—trying to choke it down while talking about anything other than prison life."
-    valleyNar "Maybe the next game we’d play, or the plans for when we finally got out."
+    "We poke at our trays—mushy potatoes, watery peas, and something that might have once been meat—trying to choke it down while talking about anything other than prison life."
+    "Maybe the next game we’d play, or the plans for when we finally got out."
 
-    valleyNar "It was an unspoken rule between us: no judgment."
-    valleyNar "We never asked each other what we did to end up here—not unless the other person wanted to tell."
-    valleyNar "It kept things simple, made sure our friendship wasn’t built on guilt or distrust."
-    valleyNar "We were here for who we were now, not whatever mistakes had landed us in this place."
-    valleyNar "It was Lucky who came up with that pact, and I am quite glad he did."
+    "It was an unspoken rule between us: no judgment."
+    "We never asked each other what we did to end up here—not unless the other person wanted to tell."
+    "It kept things simple, made sure our friendship wasn’t built on guilt or distrust."
+    "We were here for who we were now, not whatever mistakes had landed us in this place."
+    "It was Lucky who came up with that pact, and I am quite glad he did."
 
-    valleyNar "Still, I had plans to keep us together once we were free. It’s not like I had anyone waiting for me on the outside."
+    "Still, I had plans to keep us together once we were free. It’s not like I had anyone waiting for me on the outside."
 
     show lila grin at center with dissolve
 
@@ -293,7 +316,7 @@ label scene_3_cafeteria_chaos:
     show lucky surprised at right 
 
     "I pause mid-bite, blinking." 
-    valleyNar "That was not where I thought this was going."
+    "That was not where I thought this was going."
     lucky "You? Owning a restaurant? What, so you can boss us around all day?"
 
     show lila smug at center
@@ -343,23 +366,23 @@ label scene_3_cafeteria_chaos:
 
     "I almost laugh, shaking my head."
 
-    valleyNar "As he continues, I start to look around the cafeteria like I always do."
+    "As he continues, I start to look around the cafeteria like I always do."
     hide valley_surprised with dissolve
     hide lila shocked with dissolve
     hide lucky angry with dissolve
-    valleyNar "I can’t help but notice something is off today."
-    valleyNar "Some sort of tension."
-    valleyNar "If you’re around here long enough, you start to understand and get used to how things are supposed to feel."
+    "I can’t help but notice something is off today."
+    "Some sort of tension."
+    "If you’re around here long enough, you start to understand and get used to how things are supposed to feel."
 
-    valleyNar "The guards weren’t just their usual bored selves—they were watching. Focused."
-    valleyNar "The prisoners seemed too… off."
-    valleyNar "Small groups whispering in corners, a few guys standing instead of sitting, too quiet in a place that usually never shut up."
+    "The guards weren’t just their usual bored selves—they were watching. Focused."
+    "The prisoners seemed too… off."
+    "Small groups whispering in corners, a few guys standing instead of sitting, too quiet in a place that usually never shut up."
 
-    valleyNar "My gut told me something was coming."
+    "My gut told me something was coming."
 
     play sound "thud.ogg"
 
-    valleyNar "Before I can look around further, I hear a—"
+    "Before I can look around further, I hear a—"
 
 
 
@@ -372,28 +395,28 @@ label scene_3_cafeteria_chaos:
     "silence"
 
 
-    valleyNar "A voice cuts through the tension like a blade."
+    "A voice cuts through the tension like a blade."
 
     show garrick normal with dissolve
     garrick "Watch where you’re going, stupid."
 
 
 
-    valleyNar "Even if I hadn’t heard him, I would’ve felt him."
-    valleyNar "Garrick has this way of being noticed without making a scene—because he doesn’t have to."
-    valleyNar "His presence alone is enough."
+    "Even if I hadn’t heard him, I would’ve felt him."
+    "Garrick has this way of being noticed without making a scene—because he doesn’t have to."
+    "His presence alone is enough."
 
-    valleyNar "The guy he just shoved is frozen in place."
-    valleyNar "His tray had gone flying, splattering mashed potatoes and peas all over the ground."
-    valleyNar "He twitches, debating whether to pick it up or run the hell away."
+    "The guy he just shoved is frozen in place."
+    "His tray had gone flying, splattering mashed potatoes and peas all over the ground."
+    "He twitches, debating whether to pick it up or run the hell away."
 
     show garrick angry
     garrick "Pick it up."
 
-    valleyNar "Not a request. A threat."
+    "Not a request. A threat."
 
-    valleyNar "The prisoner hesitates."
-    valleyNar "The cafeteria holds its breath."
+    "The prisoner hesitates."
+    "The cafeteria holds its breath."
 
     pause 1.0
 
