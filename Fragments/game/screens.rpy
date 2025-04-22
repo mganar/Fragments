@@ -340,23 +340,26 @@ screen main_menu():
     tag menu
     style_prefix "main_menu"
 
+
     add gui.main_menu_background
 
     frame:
         style "main_menu_frame"
+        xpos -215
     vbox:
-        xpos 280
+        xpos 35  # or xpos 0 to fully align left
         ypos 330
         textbutton _("Start") action Start() at button1
         textbutton _("Load") action ShowMenu("load") at button2
-        textbutton _("Options") action ShowMenu("preferences")at button3
+        textbutton _("Options") action ShowMenu("preferences") at button3
         textbutton _("Help") action ShowMenu("help") at button4
         textbutton _("About") action ShowMenu("about") at button5
         textbutton _("Quit") action Quit(confirm=not main_menu) at button6
 
-    add "gui/overlay/main_menu_logo.png"
 
-    text "[config.name!t]" size 60 xpos 501 ypos 225 xanchor 0.5 yanchor 0.5 color u"#766249"
+    add "gui/overlay/main_menu_logo.png" xpos -215
+
+    text "[config.name!t]" size 60 xpos 270 ypos 225 xanchor 0.5 yanchor 0.5 color u"#766249"
 
 
 

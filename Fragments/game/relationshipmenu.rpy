@@ -45,13 +45,13 @@ default relationships_visible = False
 default relationship_menu_unlocked = False
 
 # Relationship menu toggle button
-screen button:
+screen RelationshipButton:
     vbox xalign 0.95 yalign 0.0:
         if relationship_menu_unlocked:
             imagebutton:
                 idle "button.png"
                 hover "hoverbutton.png"
-                action ToggleVariable("relationships_visible")
+                action ToggleVariable("relationships_visible", True)
 
 # Style for relationship menu
 style relationmenustyles:

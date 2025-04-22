@@ -46,7 +46,7 @@ default inventory_visible = False
 default inventory_menu_unlocked = False
 
 
-screen button1:
+screen InventoryButton:
     vbox xalign 0.9 yalign 0.0:  # Fully right and a bit lower from the top
         if inventory_menu_unlocked:
             imagebutton:

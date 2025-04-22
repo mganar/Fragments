@@ -1,19 +1,21 @@
 ﻿label start:
+    stop music fadeout 1.5
     $ inventory = Inventory([], 0)
-
     show screen inventory_screen  # Display the inventory permanently
-    show screen button
-    show screen button1
-    show screen open_relationship_menu
+    show screen RelationshipButton
+    show screen InventoryButton
+    show screen relationmenu
+
 label scene_1_opener:
 
     valley "Hey, what's this?"
     "You find a crumpled bill under the tray."
     $ inventory.add_item(chest_key)
     $ inventory_menu_unlocked = True
+    play sound "unlocked.mp3" 
     "Press 'I' to see you inventory!"
     scene cafeteria with fade
-
+    play sound "crowd.mp3"
     if keycard in inventory.items:
         "You swipe the keycard. The door clicks open."
     else:
@@ -90,13 +92,14 @@ label scene_1_opener:
 label scene_2_0_banter:
 
     # Lila's entrance
-    play sound "slam.ogg"  # Sound of the tray crashing
+    play sound "tray-throw.mp3"  # Sound of the tray crashing
     "SLAM. A tray crashes onto the table, jolting me out of my trance."
     "I blink hard—sharp breath in, pulse still uneven."
     
     hide valley
     show valley_surprised at left with dissolve
     show lila_angry at right with dissolve # Show an angry expression for Lila
+    play sound "crowd.mp3"
     lila "Aaaand once again, I grace you with my divine presence!"
     $ introduce_character("Lila")
     
@@ -114,8 +117,9 @@ label scene_2_0_banter:
     
 
     $ relationship_menu_unlocked = True
-    "You can press 'R' to check you reltionship with other characters in the game!"
-
+    play sound "unlocked.mp3" 
+    "You can press 'R' to check your reltionship with other characters in the game!"
+    play sound "crowd.mp3"
 
 
     if get_affection("Mira") > 10:
