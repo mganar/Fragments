@@ -345,9 +345,9 @@ screen main_menu():
 
     frame:
         style "main_menu_frame"
-        xpos -215
+        xpos 1135
     vbox:
-        xpos 35  # or xpos 0 to fully align left
+        xpos 1400  # or xpos 0 to fully align left
         ypos 330
         textbutton _("Start") action Start() at button1
         textbutton _("Load") action ShowMenu("load") at button2
@@ -357,9 +357,9 @@ screen main_menu():
         textbutton _("Quit") action Quit(confirm=not main_menu) at button6
 
 
-    add "gui/overlay/main_menu_logo.png" xpos -215
+    add "gui/overlay/main_menu_logo.png" xpos 1145
 
-    text "[config.name!t]" size 60 xpos 270 ypos 225 xanchor 0.5 yanchor 0.5 color u"#766249"
+    text "[config.name!t]" size 60 xpos 1655 ypos 225 xanchor 0.5 yanchor 0.5 color u"#766249"
 
 
 
